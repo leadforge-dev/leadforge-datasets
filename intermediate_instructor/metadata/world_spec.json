@@ -1,0 +1,168 @@
+{
+  "config": {
+    "recipe_id": "b2b_saas_procurement_v1",
+    "seed": 42,
+    "exposure_mode": "research_instructor",
+    "difficulty": "intermediate",
+    "n_accounts": 1500,
+    "n_contacts": 4200,
+    "n_leads": 5000,
+    "horizon_days": 90,
+    "primary_task": "converted_within_90_days",
+    "label_window_days": 90,
+    "snapshot_day": 30,
+    "output_path": "./out",
+    "package_version": "1.0.0",
+    "difficulty_params": {
+      "signal_strength": 0.7,
+      "noise_scale": 0.3,
+      "missing_rate": 0.08,
+      "outlier_rate": 0.04,
+      "conversion_rate_lo": 0.18,
+      "conversion_rate_hi": 0.28,
+      "committee_friction": 0.3
+    }
+  },
+  "narrative": {
+    "company": {
+      "name": "Veridian Technologies",
+      "founded_year": 2017,
+      "hq_city": "Austin",
+      "hq_country": "US",
+      "stage": "Series B",
+      "employee_range": [
+        80,
+        150
+      ]
+    },
+    "product": {
+      "name": "Veridian Procure",
+      "category": "Procurement & AP Automation",
+      "deployment": "cloud_saas",
+      "pricing_model": "per_seat_annual",
+      "acv_range_usd": [
+        18000,
+        120000
+      ],
+      "contract_terms_months": [
+        12,
+        24,
+        36
+      ],
+      "free_trial_available": true,
+      "demo_available": true
+    },
+    "market": {
+      "icp_employee_range": [
+        200,
+        2000
+      ],
+      "icp_industries": [
+        "manufacturing",
+        "logistics",
+        "professional_services",
+        "healthcare_non_clinical"
+      ],
+      "geographies": [
+        "US",
+        "UK"
+      ],
+      "avg_deal_size_usd": 42000,
+      "avg_sales_cycle_days": 45
+    },
+    "gtm_motion": {
+      "channels": [
+        "inbound_marketing",
+        "sdr_outbound",
+        "partner_referral"
+      ],
+      "inbound_share": 0.45,
+      "outbound_share": 0.35,
+      "partner_share": 0.2
+    },
+    "personas": [
+      {
+        "role": "vp_finance",
+        "title_variants": [
+          "VP Finance",
+          "CFO",
+          "Head of Finance",
+          "VP of Finance"
+        ],
+        "decision_authority": "economic_buyer",
+        "typical_involvement": "late_stage"
+      },
+      {
+        "role": "ap_manager",
+        "title_variants": [
+          "AP Manager",
+          "Accounts Payable Manager",
+          "Finance Operations Manager",
+          "AP Lead"
+        ],
+        "decision_authority": "champion",
+        "typical_involvement": "full_cycle"
+      },
+      {
+        "role": "it_director",
+        "title_variants": [
+          "IT Director",
+          "CTO",
+          "Head of IT",
+          "VP Engineering"
+        ],
+        "decision_authority": "technical_evaluator",
+        "typical_involvement": "mid_to_late"
+      },
+      {
+        "role": "procurement_manager",
+        "title_variants": [
+          "Procurement Manager",
+          "Director of Procurement",
+          "Strategic Sourcing Manager",
+          "Head of Procurement"
+        ],
+        "decision_authority": "end_user",
+        "typical_involvement": "early_to_mid"
+      }
+    ],
+    "funnel_stages": [
+      {
+        "name": "mql",
+        "label": "Marketing Qualified Lead"
+      },
+      {
+        "name": "sal",
+        "label": "Sales Accepted Lead"
+      },
+      {
+        "name": "sql",
+        "label": "Sales Qualified Lead"
+      },
+      {
+        "name": "demo_scheduled",
+        "label": "Demo Scheduled"
+      },
+      {
+        "name": "demo_completed",
+        "label": "Demo Completed"
+      },
+      {
+        "name": "proposal_sent",
+        "label": "Proposal Sent"
+      },
+      {
+        "name": "negotiation",
+        "label": "Negotiation"
+      },
+      {
+        "name": "closed_won",
+        "label": "Closed Won"
+      },
+      {
+        "name": "closed_lost",
+        "label": "Closed Lost"
+      }
+    ]
+  }
+}

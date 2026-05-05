@@ -1,0 +1,127 @@
+{
+  "motif_family": "fit_dominant",
+  "nodes": [
+    {
+      "node_id": "global_ctx",
+      "node_type": "global_context",
+      "label": "Global context",
+      "metadata": {}
+    },
+    {
+      "node_id": "contact_authority",
+      "node_type": "contact_latent",
+      "label": "Contact authority",
+      "metadata": {}
+    },
+    {
+      "node_id": "budget_readiness",
+      "node_type": "account_latent",
+      "label": "Budget readiness",
+      "metadata": {}
+    },
+    {
+      "node_id": "latent_confounder",
+      "node_type": "account_latent",
+      "label": "Latent confounder",
+      "metadata": {}
+    },
+    {
+      "node_id": "acct_fit",
+      "node_type": "account_latent",
+      "label": "Account fit",
+      "metadata": {}
+    },
+    {
+      "node_id": "acct_maturity",
+      "node_type": "account_latent",
+      "label": "Process maturity",
+      "metadata": {}
+    },
+    {
+      "node_id": "lead_state",
+      "node_type": "lead_state",
+      "label": "Lead state",
+      "metadata": {}
+    },
+    {
+      "node_id": "engagement",
+      "node_type": "engagement_state",
+      "label": "Engagement signal",
+      "metadata": {}
+    },
+    {
+      "node_id": "conversion",
+      "node_type": "outcome",
+      "label": "Converted within 90 days",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "source": "global_ctx",
+      "target": "acct_fit",
+      "weight": 0.15801846840637312,
+      "metadata": {}
+    },
+    {
+      "source": "global_ctx",
+      "target": "acct_maturity",
+      "weight": 0.09988591306476714,
+      "metadata": {}
+    },
+    {
+      "source": "acct_fit",
+      "target": "lead_state",
+      "weight": 0.6867746349736386,
+      "metadata": {}
+    },
+    {
+      "source": "acct_fit",
+      "target": "engagement",
+      "weight": 0.5997870371956121,
+      "metadata": {}
+    },
+    {
+      "source": "acct_maturity",
+      "target": "lead_state",
+      "weight": 0.38153592931911734,
+      "metadata": {}
+    },
+    {
+      "source": "contact_authority",
+      "target": "lead_state",
+      "weight": 0.2323473870682241,
+      "metadata": {}
+    },
+    {
+      "source": "budget_readiness",
+      "target": "lead_state",
+      "weight": 0.5479421816429302,
+      "metadata": {}
+    },
+    {
+      "source": "lead_state",
+      "target": "engagement",
+      "weight": 0.3579319771742749,
+      "metadata": {}
+    },
+    {
+      "source": "lead_state",
+      "target": "conversion",
+      "weight": 0.6716820311168225,
+      "metadata": {}
+    },
+    {
+      "source": "engagement",
+      "target": "conversion",
+      "weight": 0.18637605984148897,
+      "metadata": {}
+    },
+    {
+      "source": "latent_confounder",
+      "target": "lead_state",
+      "weight": 0.314456644636902,
+      "metadata": {}
+    }
+  ]
+}

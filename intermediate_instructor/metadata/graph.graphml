@@ -1,0 +1,76 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d2" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d1" for="node" attr.name="label" attr.type="string" />
+  <key id="d0" for="node" attr.name="node_type" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="global_ctx">
+      <data key="d0">global_context</data>
+      <data key="d1">Global context</data>
+    </node>
+    <node id="acct_fit">
+      <data key="d0">account_latent</data>
+      <data key="d1">Account fit</data>
+    </node>
+    <node id="acct_maturity">
+      <data key="d0">account_latent</data>
+      <data key="d1">Process maturity</data>
+    </node>
+    <node id="contact_authority">
+      <data key="d0">contact_latent</data>
+      <data key="d1">Contact authority</data>
+    </node>
+    <node id="budget_readiness">
+      <data key="d0">account_latent</data>
+      <data key="d1">Budget readiness</data>
+    </node>
+    <node id="lead_state">
+      <data key="d0">lead_state</data>
+      <data key="d1">Lead state</data>
+    </node>
+    <node id="engagement">
+      <data key="d0">engagement_state</data>
+      <data key="d1">Engagement signal</data>
+    </node>
+    <node id="conversion">
+      <data key="d0">outcome</data>
+      <data key="d1">Converted within 90 days</data>
+    </node>
+    <node id="latent_confounder">
+      <data key="d0">account_latent</data>
+      <data key="d1">Latent confounder</data>
+    </node>
+    <edge source="global_ctx" target="acct_fit">
+      <data key="d2">0.15801846840637312</data>
+    </edge>
+    <edge source="global_ctx" target="acct_maturity">
+      <data key="d2">0.09988591306476714</data>
+    </edge>
+    <edge source="acct_fit" target="lead_state">
+      <data key="d2">0.6867746349736386</data>
+    </edge>
+    <edge source="acct_fit" target="engagement">
+      <data key="d2">0.5997870371956121</data>
+    </edge>
+    <edge source="acct_maturity" target="lead_state">
+      <data key="d2">0.38153592931911734</data>
+    </edge>
+    <edge source="contact_authority" target="lead_state">
+      <data key="d2">0.2323473870682241</data>
+    </edge>
+    <edge source="budget_readiness" target="lead_state">
+      <data key="d2">0.5479421816429302</data>
+    </edge>
+    <edge source="lead_state" target="engagement">
+      <data key="d2">0.3579319771742749</data>
+    </edge>
+    <edge source="lead_state" target="conversion">
+      <data key="d2">0.6716820311168225</data>
+    </edge>
+    <edge source="engagement" target="conversion">
+      <data key="d2">0.18637605984148897</data>
+    </edge>
+    <edge source="latent_confounder" target="lead_state">
+      <data key="d2">0.314456644636902</data>
+    </edge>
+  </graph>
+</graphml>
