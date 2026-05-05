@@ -1,0 +1,13 @@
+{
+  "task_id": "converted_within_90_days",
+  "task_type": "binary_classification",
+  "label_column": "converted_within_90_days",
+  "label_window_days": 90,
+  "primary_table": "leads",
+  "split": {
+    "train": 0.7,
+    "valid": 0.15,
+    "test": 0.15
+  },
+  "description": "A lead is considered converted if a `closed_won` event is recorded within 90 days of the lead's snapshot anchor date. The label is event-derived \u2014 never sampled directly. All features are pre-anchor (leakage-free by construction)."
+}

@@ -1,0 +1,75 @@
+{
+  "bundle_schema_version": "4",
+  "package_version": "1.0.0",
+  "recipe_id": "b2b_saas_procurement_v1",
+  "seed": 42,
+  "generation_timestamp": "2026-05-05T08:57:50+00:00",
+  "exposure_mode": "research_instructor",
+  "difficulty": "intermediate",
+  "n_accounts": 1500,
+  "n_contacts": 4200,
+  "n_leads": 5000,
+  "horizon_days": 90,
+  "primary_task": "converted_within_90_days",
+  "label_window_days": 90,
+  "snapshot_day": 30,
+  "motif_family": "fit_dominant",
+  "redacted_columns": [],
+  "tables": {
+    "accounts": {
+      "row_count": 1500,
+      "file": "tables/accounts.parquet",
+      "sha256": "79d8ed63bac16a3654c3c1fa15564a1040b6cea4dd3cb15d4f9aa0fe22a54d21"
+    },
+    "contacts": {
+      "row_count": 4200,
+      "file": "tables/contacts.parquet",
+      "sha256": "51657ae49a1299304a60bb831e8a06f1d60e7fd30412e2d85cd51068b0f110c3"
+    },
+    "leads": {
+      "row_count": 5000,
+      "file": "tables/leads.parquet",
+      "sha256": "cdc5adca4f700faf0718c051092580eeb4b377943234f509bb6655d8b4f61c02"
+    },
+    "touches": {
+      "row_count": 54803,
+      "file": "tables/touches.parquet",
+      "sha256": "bf9c99a51531a166df13f0d64681c5d504de6be5d97a4c68973683376733098c"
+    },
+    "sessions": {
+      "row_count": 14565,
+      "file": "tables/sessions.parquet",
+      "sha256": "e3322c882e26a955ef67d80b2693fb73452be3e1584332626a766352768757f6"
+    },
+    "sales_activities": {
+      "row_count": 60739,
+      "file": "tables/sales_activities.parquet",
+      "sha256": "3c863a93e042d3ed77881b4968d74f37a357bdb61024e4151c34ea3c4bb8d7ae"
+    },
+    "opportunities": {
+      "row_count": 4641,
+      "file": "tables/opportunities.parquet",
+      "sha256": "b9ca06e6066f288b5472cbb47990baa581ffd9c1d7cee77cc834f862496d3540"
+    },
+    "customers": {
+      "row_count": 1049,
+      "file": "tables/customers.parquet",
+      "sha256": "d919686db655ab0b65c2d12c7d228c990a13fae1861c5a2cbd44da4256a0d2dc"
+    },
+    "subscriptions": {
+      "row_count": 1049,
+      "file": "tables/subscriptions.parquet",
+      "sha256": "4c42aeaec09691b155433a47cfc24c3af3fb2326b0474fcf59e38a958bfac91e"
+    }
+  },
+  "tasks": {
+    "converted_within_90_days": {
+      "train_rows": 3500,
+      "train_sha256": "33667a3e39a13162f45f21f92b7d564a5d9628aeff32c76deb315eb72eb1acce",
+      "valid_rows": 750,
+      "valid_sha256": "72333ee56b7cadef9a9bc6097f15c1d53f0280be78532cb8fed4038f6837ff2e",
+      "test_rows": 750,
+      "test_sha256": "a17fd062bd341779f00e25f73a101fd3d92212f18889503292d18fa5ee3a34d9"
+    }
+  }
+}

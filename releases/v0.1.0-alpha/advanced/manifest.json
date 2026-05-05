@@ -1,0 +1,78 @@
+{
+  "bundle_schema_version": "4",
+  "package_version": "1.0.0",
+  "recipe_id": "b2b_saas_procurement_v1",
+  "seed": 42,
+  "generation_timestamp": "2026-05-05T08:57:47+00:00",
+  "exposure_mode": "student_public",
+  "difficulty": "advanced",
+  "n_accounts": 1500,
+  "n_contacts": 4200,
+  "n_leads": 5000,
+  "horizon_days": 90,
+  "primary_task": "converted_within_90_days",
+  "label_window_days": 90,
+  "snapshot_day": 30,
+  "motif_family": "fit_dominant",
+  "redacted_columns": [
+    "current_stage",
+    "is_sql"
+  ],
+  "tables": {
+    "accounts": {
+      "row_count": 1500,
+      "file": "tables/accounts.parquet",
+      "sha256": "79d8ed63bac16a3654c3c1fa15564a1040b6cea4dd3cb15d4f9aa0fe22a54d21"
+    },
+    "contacts": {
+      "row_count": 4200,
+      "file": "tables/contacts.parquet",
+      "sha256": "51657ae49a1299304a60bb831e8a06f1d60e7fd30412e2d85cd51068b0f110c3"
+    },
+    "leads": {
+      "row_count": 5000,
+      "file": "tables/leads.parquet",
+      "sha256": "676539d776eaab18962aa193d851f928389dc472189c6ea167c0dcc08a47075e"
+    },
+    "touches": {
+      "row_count": 54662,
+      "file": "tables/touches.parquet",
+      "sha256": "1fe88f89b5e71aa407848e98b388fe51d923ee554beabd66fe3825dfa229f20a"
+    },
+    "sessions": {
+      "row_count": 14599,
+      "file": "tables/sessions.parquet",
+      "sha256": "3bdca4dc33cc9262786f378350a06488abbde5301c5755595fc4587910703853"
+    },
+    "sales_activities": {
+      "row_count": 62254,
+      "file": "tables/sales_activities.parquet",
+      "sha256": "ceaabc205c7d525a4f11bd84062a460003acb85d7f72a76f335dd36152b275fc"
+    },
+    "opportunities": {
+      "row_count": 4557,
+      "file": "tables/opportunities.parquet",
+      "sha256": "d9212f756f438b408f6e653a955df7fa7fa02cf9c761dc5581290297c2af2a67"
+    },
+    "customers": {
+      "row_count": 393,
+      "file": "tables/customers.parquet",
+      "sha256": "45fd1af5ec99722e8dbd03c4e6e91ec25125bab503fd28d7138cb09eebbcdb57"
+    },
+    "subscriptions": {
+      "row_count": 393,
+      "file": "tables/subscriptions.parquet",
+      "sha256": "67a4858b9fba381df7869ca9c9730a9beedd52feddf963e95412e46247489c5b"
+    }
+  },
+  "tasks": {
+    "converted_within_90_days": {
+      "train_rows": 3500,
+      "train_sha256": "12b84f8e475154334befdcfca8c9263db244aaf3a9d75c926e6c7b716c3d368d",
+      "valid_rows": 750,
+      "valid_sha256": "3e423ef7e0349878cff80638ab14f04b8ffcfc5c9a87c9fec1fb8b5a0a73be71",
+      "test_rows": 750,
+      "test_sha256": "cace0b3aa863333be7e955990c27faa72fcc86e87a00ab02270a35e5f06cc614"
+    }
+  }
+}

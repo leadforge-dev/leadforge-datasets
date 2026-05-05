@@ -1,0 +1,23 @@
+{
+  "release": "v0.1.0-alpha",
+  "build_timestamp_utc": "2026-05-05T09:34:50Z",
+  "leadforge": {
+    "version": "1.0.0",
+    "git_sha": "8dc21c12aa5a407823eda93747abb6cff4ac3d2a",
+    "git_repo": "https://github.com/leadforge-dev/leadforge"
+  },
+  "recipe": {
+    "id": "b2b_saas_procurement_v1",
+    "seed": 42
+  },
+  "bundle_schema_version": "4",
+  "python_version": "3.12.11",
+  "build_command": "./build.sh",
+  "bundles": [
+    {"name": "intro",                    "mode": "student_public",      "difficulty": "intro",        "n_leads": 5000, "train_conversion": 0.415},
+    {"name": "intermediate",             "mode": "student_public",      "difficulty": "intermediate", "n_leads": 5000, "train_conversion": 0.201},
+    {"name": "advanced",                 "mode": "student_public",      "difficulty": "advanced",     "n_leads": 5000, "train_conversion": 0.079},
+    {"name": "intermediate_instructor",  "mode": "research_instructor", "difficulty": "intermediate", "n_leads": 5000, "train_conversion": 0.201},
+    {"name": "tiny_demo",                "mode": "student_public",      "difficulty": "intro",        "n_leads": 100,  "train_conversion": 0.429}
+  ]
+}

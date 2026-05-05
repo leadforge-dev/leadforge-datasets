@@ -1,0 +1,33 @@
+name,dtype,description,category,is_target,leakage_risk
+account_id,string,Opaque account identifier.,account,False,False
+industry,string,Industry vertical of the buying organization.,account,False,False
+region,string,Geographic region of the account's headquarters.,account,False,False
+employee_band,string,Banded employee headcount of the account.,account,False,False
+estimated_revenue_band,string,Banded estimated annual revenue of the account.,account,False,False
+process_maturity_band,string,Banded internal process maturity score (latent).,account,False,False
+contact_id,string,Opaque contact identifier.,contact,False,False
+role_function,string,"Functional area of the primary contact (e.g. finance, ops).",contact,False,False
+seniority,string,Seniority band of the primary contact.,contact,False,False
+buyer_role,string,"Buyer role classification (economic_buyer, champion, etc.).",contact,False,False
+lead_id,string,Opaque lead identifier.,lead_meta,False,False
+lead_created_at,string,ISO-8601 timestamp when the lead was created.,lead_meta,False,False
+lead_source,string,"Origination source of the lead (e.g. inbound_form, sdr_outbound).",lead_meta,False,False
+first_touch_channel,string,Marketing channel responsible for the first recorded touch.,lead_meta,False,False
+touch_count,Int64,Total number of marketing/sales touches recorded before snapshot.,engagement,False,False
+inbound_touch_count,Int64,Number of inbound touches before snapshot.,engagement,False,False
+outbound_touch_count,Int64,Number of outbound touches before snapshot.,engagement,False,False
+session_count,Int64,Number of web/trial sessions recorded before snapshot.,engagement,False,False
+pricing_page_views,Int64,Cumulative pricing page views across all sessions before snapshot.,engagement,False,False
+demo_page_views,Int64,Cumulative demo page views across all sessions before snapshot.,engagement,False,False
+total_session_duration_seconds,Int64,Sum of session durations (seconds) before snapshot.,engagement,False,False
+touches_week_1,Int64,Number of touches in the first 7 days after lead creation.,engagement,False,False
+touches_last_7_days,Int64,Number of touches in the last 7 days before snapshot cutoff.,engagement,False,False
+days_since_first_touch,Float64,Days between first touch and snapshot cutoff (NaN if no touches).,engagement,False,False
+activity_count,Int64,Number of sales activities logged before snapshot.,sales,False,False
+days_since_last_touch,Float64,Days elapsed between most recent touch and snapshot cutoff.,sales,False,False
+opportunity_created,boolean,Whether any opportunity was created by snapshot date (open or closed).,sales,False,False
+has_open_opportunity,boolean,Whether an open opportunity existed at snapshot date.,sales,False,False
+opportunity_estimated_acv,Float64,Estimated ACV of the most recent open opportunity (NaN if none).,sales,False,False
+expected_acv,Float64,"Expected ACV: opportunity ACV if available by snapshot, else revenue band midpoint heuristic (NaN if neither available).",sales,False,False
+total_touches_all,Int64,Total touches over full 90-day window. LEAKAGE TRAP: uses post-snapshot data. Included for pedagogical purposes only.,engagement,False,True
+converted_within_90_days,boolean,Label: True if a closed_won event occurred within 90 days of the snapshot anchor date. Derived from simulated events.,target,True,False

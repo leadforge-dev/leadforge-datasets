@@ -1,0 +1,48 @@
+{
+  "motif_family": "fit_dominant",
+  "conversion_hazard": {
+    "name": "conversion_hazard",
+    "score_mech": {
+      "name": "latent_score",
+      "weights": {
+        "latent_account_fit": 2.5,
+        "latent_budget_readiness": 1.5,
+        "latent_problem_awareness": 0.5,
+        "latent_engagement_propensity": 0.5,
+        "latent_sales_friction": -0.5
+      },
+      "bias": -1.5
+    },
+    "base_rate": 0.008,
+    "scale": 0.06,
+    "max_daily_rate": 0.2
+  },
+  "stage_transition": {
+    "name": "hazard_transition",
+    "score_mech": {
+      "name": "latent_score",
+      "weights": {
+        "latent_account_fit": 2.0,
+        "latent_problem_awareness": 1.0,
+        "latent_responsiveness": 0.5
+      },
+      "bias": -1.0
+    },
+    "base_rate": 0.05,
+    "scale": 0.15,
+    "max_daily_rate": 0.25,
+    "min_dwell_days": 2
+  },
+  "touch_intensity": {
+    "name": "recency_decay_intensity",
+    "base_rate": 0.4,
+    "decay_factor": 0.97,
+    "floor_rate": 0.02
+  },
+  "measurement": {
+    "name": "noisy_proxy",
+    "latent_key": "latent_account_fit",
+    "noise_std": 0.1,
+    "missing_rate": 0.05
+  }
+}
