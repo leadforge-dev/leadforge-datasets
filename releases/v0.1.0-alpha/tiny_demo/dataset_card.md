@@ -38,15 +38,15 @@
 
 | Table | Rows |
 |---|---:|
-| accounts | 40 |
-| contacts | 120 |
+| accounts | 30 |
+| contacts | 84 |
 | leads | 100 |
-| touches | 1,044 |
-| sessions | 278 |
-| sales_activities | 1,121 |
-| opportunities | 91 |
-| customers | 36 |
-| subscriptions | 36 |
+| touches | 1,050 |
+| sessions | 293 |
+| sales_activities | 1,084 |
+| opportunities | 93 |
+| customers | 42 |
+| subscriptions | 42 |
 
 ## Feature categories
 
