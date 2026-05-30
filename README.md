@@ -1,11 +1,19 @@
 # leadforge-datasets
 
+[![Validate dataset release](https://github.com/leadforge-dev/leadforge-datasets/actions/workflows/validate.yml/badge.svg)](https://github.com/leadforge-dev/leadforge-datasets/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Public dataset bundles produced by the [leadforge](https://github.com/leadforge-dev/leadforge)
 synthetic CRM/funnel data generator.
 
 > **Status: alpha (`v0.1.0-alpha`).**  This release is intended for review and
 > roadmap discussion, not production use.  Bundle layout, manifest schema,
 > and column sets may change before the first stable release.
+
+Use this repository when you want ready-made synthetic CRM and lead-scoring
+datasets for teaching, demos, model benchmarking, or release review.  Use
+[`leadforge`](https://github.com/leadforge-dev/leadforge) itself when you want
+to generate new worlds or recipes.
 
 ---
 
@@ -30,6 +38,37 @@ Pre-computed companion artifacts in [`releases/v0.1.0-alpha/`](releases/v0.1.0-a
 - [`build.sh`](releases/v0.1.0-alpha/build.sh) — canonical build command
 - [`validation.log`](releases/v0.1.0-alpha/validation.log) — `leadforge validate` output for all five bundles
 - [`baselines.py`](releases/v0.1.0-alpha/baselines.py) — self-contained baseline reproduction script
+
+---
+
+## Dataset preview
+
+The public flat CSV is intentionally small enough to inspect directly while
+still preserving a realistic relational CRM shape.  A few representative
+columns from `intro/lead_scoring.csv` look like this:
+
+| split | industry | region | employee_band | revenue_band | role_function | seniority | buyer_role | lead_source | touch_count | session_count | converted_90d |
+|---|---|---|---|---|---|---|---|---|---:|---:|---:|
+| train | logistics | UK | 200-499 | $50M-$200M | procurement_manager | vp | end_user | inbound_marketing | 9 | 3 | true |
+| train | logistics | UK | 500-999 | $10M-$50M | it_director | c_suite | technical_evaluator | inbound_marketing | 7 | 1 | true |
+| train | logistics | US | 200-499 | $1M-$10M | ap_manager | director | champion | partner_referral | 13 | 5 | true |
+
+The release also includes a relational version of the same world: accounts,
+contacts, leads, touches, sessions, sales activities, opportunities, customers,
+and subscriptions are available as Parquet tables under each bundle's
+`tables/` directory.
+
+---
+
+## License and reuse
+
+The repository-level license is [MIT](LICENSE).  The current release also keeps
+the same license text inside
+[`releases/v0.1.0-alpha/LICENSE`](releases/v0.1.0-alpha/LICENSE) so copied or
+downloaded release directories remain self-contained.
+
+The datasets are synthetic.  They are generated from a simulated commercial
+world, not from customer records or private CRM exports.
 
 ---
 
@@ -164,9 +203,11 @@ If you want to understand the package output in fifteen minutes:
 - **`tiny_demo` conversion rate is noisy.**  N=70 in the train split
   yields a wide CI; the 42.9% figure should be read as "consistent with
   the intro target of 41.5%, not a separate measurement."
-- **No CI on this repo.**  `validation.log` is captured by `build.sh` at
-  build time but not enforced on every push.  Acceptable for an alpha
-  with one publisher; revisit for v0.2.
+- **CI validates repository structure, not generator semantics.**  The
+  lightweight GitHub Actions workflow checks that the committed release has the
+  expected manifest, file layout, redaction, and sample flat-file contract.
+  Full semantic validation still comes from `leadforge validate` and the
+  captured [`validation.log`](releases/v0.1.0-alpha/validation.log).
 
 ---
 
@@ -177,5 +218,6 @@ If you want to understand the package output in fifteen minutes:
 - Recipe: `b2b_saas_procurement_v1` (mid-market B2B SaaS procurement vertical)
 - Seed: `42`
 - Bundle schema: `v4`
-- License: [MIT](releases/v0.1.0-alpha/LICENSE)
+- License: [MIT](LICENSE); release copy at
+  [`releases/v0.1.0-alpha/LICENSE`](releases/v0.1.0-alpha/LICENSE)
 - Full provenance: [`releases/v0.1.0-alpha/provenance.json`](releases/v0.1.0-alpha/provenance.json)
