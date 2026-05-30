@@ -6,6 +6,8 @@
 Public dataset bundles produced by the [leadforge](https://github.com/leadforge-dev/leadforge)
 synthetic CRM/funnel data generator.
 
+Created by [Shay Palachy Affek ](http://www.shaypalachy.com/).
+
 > **Status: alpha (`v0.1.0-alpha`).**  This release is intended for review and
 > roadmap discussion, not production use.  Bundle layout, manifest schema,
 > and column sets may change before the first stable release.
@@ -221,3 +223,7 @@ If you want to understand the package output in fifteen minutes:
 - License: [MIT](LICENSE); release copy at
   [`releases/v0.1.0-alpha/LICENSE`](releases/v0.1.0-alpha/LICENSE)
 - Full provenance: [`releases/v0.1.0-alpha/provenance.json`](releases/v0.1.0-alpha/provenance.json)
+
+## Credits
+
+Created by [Shay Palachy Affek ](http://www.shaypalachy.com/) [GitHub](https://github.com/shaypal5)
