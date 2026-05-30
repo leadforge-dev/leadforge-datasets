@@ -226,4 +226,4 @@ If you want to understand the package output in fifteen minutes:
 
 ## Credits
 
-Created by [Shay Palachy Affek ](http://www.shaypalachy.com/) [GitHub](https://github.com/shaypal5)
+Created by [Shay Palachy Affek ](http://www.shaypalachy.com/) [[GitHub](https://github.com/shaypal5)]
