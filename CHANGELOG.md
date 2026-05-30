@@ -5,6 +5,17 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+## Unreleased
+
+### Added
+
+- Root `LICENSE` file so GitHub and first-time users can detect the
+  repository's reuse terms without opening a release subdirectory.
+- README badges, license/reuse guidance, and a compact public CSV preview for
+  faster first-time orientation.
+- Lightweight GitHub Actions validation for the committed alpha release
+  structure and public flat-file contract.
+
 ## v0.1.0-alpha — 2026-05-05
 
 First populated release.  Intended for review and roadmap discussion by
